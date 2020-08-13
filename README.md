@@ -5,3 +5,4 @@ The filters can be designed using elsie software of tonnesoftware (until 7th ord
 The AS169 are switched by to lines from a 74HC595 01 is off 10 is on. The boards can be cascaded.
 ![VFO](https://github.com/paulh002/band-passfilter-arduino-esp32/blob/master/bpf.jpg)
 
+![VFO](https://github.com/paulh002/band-passfilter-arduino-esp32/blob/master/10m.png)
