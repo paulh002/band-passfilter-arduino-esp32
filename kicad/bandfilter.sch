@@ -25,11 +25,9 @@ F 3 "~" H 10900 1300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Text GLabel 10800 1500 3    50   Input ~ 0
-SCLK
+SDA
 Text GLabel 10900 1500 3    50   Input ~ 0
-RCLK
-Text GLabel 11000 1500 3    50   Input ~ 0
-SER
+SCL
 $Comp
 L power:GND #PWR03
 U 1 1 5D4E0DD7
@@ -63,23 +61,8 @@ F 3 "" H 11200 1500 50  0001 C CNN
 	1    11200 1500
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR026
-U 1 1 5D1C62FB
-P 11800 5350
-F 0 "#PWR026" H 11800 5100 50  0001 C CNN
-F 1 "GND" H 11805 5177 50  0000 C CNN
-F 2 "" H 11800 5350 50  0001 C CNN
-F 3 "" H 11800 5350 50  0001 C CNN
-	1    11800 5350
-	1    0    0    -1  
-$EndComp
-Text GLabel 11800 4950 0    50   Input ~ 0
-SCLK
-Text GLabel 11800 5250 0    50   Input ~ 0
-RCLK
-Text GLabel 11800 4750 0    50   Input ~ 0
-SER
+Text GLabel 11600 7000 0    50   Input ~ 0
+SDA
 $Comp
 L Device:C C10
 U 1 1 5D164978
@@ -1043,27 +1026,14 @@ Wire Wire Line
 Wire Wire Line
 	2900 1650 2950 1650
 $Comp
-L 74xx:74HC595 U10
-U 1 1 5D256E65
-P 12200 5150
-F 0 "U10" H 12200 5931 50  0000 C CNN
-F 1 "74HC595" H 12200 5840 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 12200 5150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 12200 5150 50  0001 C CNN
-	1    12200 5150
-	1    0    0    -1  
-$EndComp
-Text GLabel 11800 5050 0    50   Input ~ 0
-Vcc
-$Comp
 L power:GND #PWR027
 U 1 1 5D29F33D
-P 12200 5850
-F 0 "#PWR027" H 12200 5600 50  0001 C CNN
-F 1 "GND" H 12205 5677 50  0000 C CNN
-F 2 "" H 12200 5850 50  0001 C CNN
-F 3 "" H 12200 5850 50  0001 C CNN
-	1    12200 5850
+P 12100 5850
+F 0 "#PWR027" H 12100 5600 50  0001 C CNN
+F 1 "GND" H 12105 5677 50  0000 C CNN
+F 2 "" H 12100 5850 50  0001 C CNN
+F 3 "" H 12100 5850 50  0001 C CNN
+	1    12100 5850
 	1    0    0    -1  
 $EndComp
 Text GLabel 11100 1500 3    50   Input ~ 0
@@ -1092,8 +1062,6 @@ F 3 "" H 12300 4000 50  0001 C CNN
 $EndComp
 Text GLabel 12300 3700 1    50   Input ~ 0
 Vcc
-Text GLabel 10700 1500 3    50   Input ~ 0
-Dout
 Text GLabel 12600 4750 2    50   Input ~ 0
 Qa
 Text GLabel 12600 4850 2    50   Input ~ 0
@@ -1106,9 +1074,9 @@ Text GLabel 12600 5150 2    50   Input ~ 0
 Qe
 Text GLabel 12600 5250 2    50   Input ~ 0
 Qf
-Text GLabel 12600 5350 2    50   Input ~ 0
+Text GLabel 12600 6900 2    50   Input ~ 0
 Qg
-Text GLabel 12600 5450 2    50   Input ~ 0
+Text GLabel 12600 7000 2    50   Input ~ 0
 Qh
 $Comp
 L bandfilter-rescue:AS169-73LF-RF_Switch U5
@@ -1676,7 +1644,7 @@ F 3 "" H 1100 6950 50  0001 C CNN
 	1    1100 6950
 	1    0    0    -1  
 $EndComp
-Text GLabel 12200 4550 1    50   Input ~ 0
+Text GLabel 12100 4450 1    50   Input ~ 0
 Vcc
 $Comp
 L Device:C C21
@@ -1734,58 +1702,22 @@ Connection ~ 6300 1650
 Wire Wire Line
 	6300 1650 7000 1650
 $Comp
-L power:GND #PWR0101
-U 1 1 5EE20B00
-P 11800 7500
-F 0 "#PWR0101" H 11800 7250 50  0001 C CNN
-F 1 "GND" H 11805 7327 50  0000 C CNN
-F 2 "" H 11800 7500 50  0001 C CNN
-F 3 "" H 11800 7500 50  0001 C CNN
-	1    11800 7500
-	1    0    0    -1  
-$EndComp
-Text GLabel 11800 7100 0    50   Input ~ 0
-SCLK
-Text GLabel 11800 7400 0    50   Input ~ 0
-RCLK
-$Comp
-L 74xx:74HC595 U11
-U 1 1 5EE20B0D
-P 12200 7300
-F 0 "U11" H 12200 8081 50  0000 C CNN
-F 1 "74HC595" H 12200 7990 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 12200 7300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 12200 7300 50  0001 C CNN
-	1    12200 7300
-	1    0    0    -1  
-$EndComp
-Text GLabel 11800 7200 0    50   Input ~ 0
-Vcc
-$Comp
 L power:GND #PWR0102
 U 1 1 5EE20B18
-P 12200 8000
-F 0 "#PWR0102" H 12200 7750 50  0001 C CNN
-F 1 "GND" H 12205 7827 50  0000 C CNN
-F 2 "" H 12200 8000 50  0001 C CNN
-F 3 "" H 12200 8000 50  0001 C CNN
-	1    12200 8000
+P 12100 8000
+F 0 "#PWR0102" H 12100 7750 50  0001 C CNN
+F 1 "GND" H 12105 7827 50  0000 C CNN
+F 2 "" H 12100 8000 50  0001 C CNN
+F 3 "" H 12100 8000 50  0001 C CNN
+	1    12100 8000
 	1    0    0    -1  
 $EndComp
-Text GLabel 12600 7800 3    50   Input ~ 0
-Dout
 Text GLabel 12600 7600 2    50   Input ~ 0
 Qi
 Text GLabel 12600 7500 2    50   Input ~ 0
 Qj
-Text GLabel 12200 6700 1    50   Input ~ 0
+Text GLabel 12100 6600 1    50   Input ~ 0
 Vcc
-Wire Wire Line
-	12600 6100 11800 6100
-Wire Wire Line
-	11800 6100 11800 6900
-Wire Wire Line
-	12600 5650 12600 6100
 $Comp
 L Connector_Generic:Conn_01x07 J5
 U 1 1 5EE73E69
@@ -1797,12 +1729,10 @@ F 3 "~" H 10900 650 50  0001 C CNN
 	1    10900 650 
 	0    -1   -1   0   
 $EndComp
-Text GLabel 11000 850  3    50   Input ~ 0
-Dout
 Text GLabel 10800 850  3    50   Input ~ 0
-SCLK
+SDA
 Text GLabel 10900 850  3    50   Input ~ 0
-RCLK
+SCL
 Text GLabel 11100 850  3    50   Input ~ 0
 Vcc
 $Comp
@@ -2192,4 +2122,166 @@ Wire Wire Line
 	10200 1500 10600 1500
 Wire Wire Line
 	10200 850  10200 1500
+$Comp
+L Interface_Expansion:PCF8574A U10
+U 1 1 61190CB9
+P 12100 5150
+F 0 "U10" H 12100 6031 50  0000 C CNN
+F 1 "PCF8574A" H 12100 5940 50  0000 C CNN
+F 2 "Package_SO:SOP-16_7.5x10.4mm_P1.27mm" H 12100 5150 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/PCF8574_PCF8574A.pdf" H 12100 5150 50  0001 C CNN
+	1    12100 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_Expansion:PCF8574A U11
+U 1 1 611C0630
+P 12100 7300
+F 0 "U11" H 12100 8181 50  0000 C CNN
+F 1 "PCF8574A" H 12100 8090 50  0000 C CNN
+F 2 "Package_SO:SOP-16_7.5x10.4mm_P1.27mm" H 12100 7300 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/PCF8574_PCF8574A.pdf" H 12100 7300 50  0001 C CNN
+	1    12100 7300
+	1    0    0    -1  
+$EndComp
+Text GLabel 11600 6900 0    50   Input ~ 0
+SCL
+$Comp
+L Device:C C58
+U 1 1 61236F97
+P 13350 3850
+F 0 "C58" H 13235 3804 50  0000 R CNN
+F 1 "10u" H 13235 3895 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 13388 3700 50  0001 C CNN
+F 3 "~" H 13350 3850 50  0001 C CNN
+	1    13350 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C59
+U 1 1 6123781A
+P 13800 3850
+F 0 "C59" H 13685 3804 50  0000 R CNN
+F 1 "10u" H 13685 3895 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 13838 3700 50  0001 C CNN
+F 3 "~" H 13800 3850 50  0001 C CNN
+	1    13800 3850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	12900 3700 13350 3700
+Connection ~ 12900 3700
+Connection ~ 13350 3700
+Wire Wire Line
+	13350 3700 13800 3700
+Wire Wire Line
+	12900 4000 13350 4000
+Connection ~ 12900 4000
+Connection ~ 13350 4000
+Wire Wire Line
+	13350 4000 13800 4000
+$Comp
+L bandfilter-rescue:AS169-73LF-RF_Switch U12
+U 1 1 61241FEA
+P 9000 8500
+F 0 "U12" H 9000 8925 50  0000 C CNN
+F 1 "AS169-73LF" H 9000 8834 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 9100 8500 50  0001 C CNN
+F 3 "http://www.skyworksinc.com/uploads/documents/AS179_92LF_200176H.pdf" H 9100 8500 50  0001 C CNN
+	1    9000 8500
+	-1   0    0    -1  
+$EndComp
+Text GLabel 9400 8600 2    50   Input ~ 0
+Qm
+Text GLabel 9400 8700 2    50   Input ~ 0
+Qn
+Text GLabel 12600 7100 2    50   Input ~ 0
+Qm
+Text GLabel 12600 7200 2    50   Input ~ 0
+Qn
+Wire Wire Line
+	9750 8400 9400 8400
+$Comp
+L power:GND #PWR0104
+U 1 1 61254469
+P 8900 8900
+F 0 "#PWR0104" H 8900 8650 50  0001 C CNN
+F 1 "GND" H 8905 8727 50  0000 C CNN
+F 2 "" H 8900 8900 50  0001 C CNN
+F 3 "" H 8900 8900 50  0001 C CNN
+	1    8900 8900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 9100 1300 6750
+Connection ~ 1300 6750
+$Comp
+L Device:C C60
+U 1 1 6126AC37
+P 8450 8500
+F 0 "C60" H 8335 8454 50  0000 R CNN
+F 1 "100n" H 8335 8545 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8488 8350 50  0001 C CNN
+F 3 "~" H 8450 8500 50  0001 C CNN
+	1    8450 8500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8300 8500 8300 9100
+Wire Wire Line
+	1300 9100 8300 9100
+$Comp
+L Device:C C71
+U 1 1 6127D42A
+P 9750 7850
+F 0 "C71" H 9635 7804 50  0000 R CNN
+F 1 "100n" H 9635 7895 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9788 7700 50  0001 C CNN
+F 3 "~" H 9750 7850 50  0001 C CNN
+	1    9750 7850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9750 7050 9750 7700
+Connection ~ 9750 7050
+Wire Wire Line
+	9750 8000 9750 8400
+Text GLabel 11600 4850 0    50   Input ~ 0
+SDA
+Text GLabel 11600 4750 0    50   Input ~ 0
+SCL
+Wire Wire Line
+	11600 5050 11600 5150
+Connection ~ 11600 5150
+Wire Wire Line
+	11600 5150 11600 5250
+$Comp
+L power:GND #PWR?
+U 1 1 614EC741
+P 11600 5150
+F 0 "#PWR?" H 11600 4900 50  0001 C CNN
+F 1 "GND" H 11605 4977 50  0000 C CNN
+F 2 "" H 11600 5150 50  0001 C CNN
+F 3 "" H 11600 5150 50  0001 C CNN
+	1    11600 5150
+	0    1    1    0   
+$EndComp
+Text GLabel 11600 7200 0    50   Input ~ 0
+Vcc
+Wire Wire Line
+	11600 7300 11600 7350
+$Comp
+L power:GND #PWR?
+U 1 1 614FDF1B
+P 11600 7350
+F 0 "#PWR?" H 11600 7100 50  0001 C CNN
+F 1 "GND" H 11605 7177 50  0000 C CNN
+F 2 "" H 11600 7350 50  0001 C CNN
+F 3 "" H 11600 7350 50  0001 C CNN
+	1    11600 7350
+	0    1    1    0   
+$EndComp
+Connection ~ 11600 7350
+Wire Wire Line
+	11600 7350 11600 7400
 $EndSCHEMATC
